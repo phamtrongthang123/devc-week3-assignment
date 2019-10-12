@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import CHOICES from './data'
 import styles from './styles'
-class Title extends React.Component {
+class GameBoard extends React.Component {
   render() {
     return (
       <View style={styles.containerUI}>
@@ -26,4 +26,4 @@ class Title extends React.Component {
   }
 };
 
-export { Title } 
+export { GameBoard } 

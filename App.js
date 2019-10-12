@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Constants from 'expo-constants';
-import { Title } from './title';
+import { GameBoard } from './GameBoard';
 import CHOICES from './data';
 import styles from './styles'
 
@@ -57,7 +57,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.containerResult}>
-          <Title
+          <GameBoard
             player = {this.state.gameStatus=='VS'?'':'Computer'}
             choice={this.state.computerChoice}
             choiceimg={this.state.computerChoiceimg}
@@ -65,7 +65,7 @@ export default class App extends React.Component {
           <Text style={[styles.textStatus,{color: this.state.gameStatus=='Victory!'? 'green':
           this.state.gameStatus =='Defeat!'?'red':'black'
         }]}>{this.state.gameStatus}</Text>
-          <Title
+          <GameBoard
             player= {this.state.gameStatus == 'VS' ? '' : 'YOU'}
             choice={this.state.playerChoice}
             choiceimg={this.state.playerChoiceimg}
